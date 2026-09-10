@@ -1,0 +1,21 @@
+{
+  "name": "sih-academia-industry",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portal for Academia–Industry Collaboration — SIH 26044",
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev": "npm run dev:web & npm run dev:api",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:api": "npm run build --workspace=apps/api",
+    "build": "npm run build:web && npm run build:api",
+    "lint:web": "npm run lint --workspace=apps/web",
+    "check:api": "npm run typecheck --workspace=apps/api"
+  },
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/shared"
+  ]
+}

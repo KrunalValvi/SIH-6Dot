@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-canvas text-brand-ink font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-primary text-brand-on-primary text-btn
+           rounded-md px-5 py-3 h-10
+           inline-flex items-center justify-center
+           transition-colors duration-150;
+  }
+  .btn-primary:hover {
+    @apply bg-brand-primary-active;
+  }
+  .btn-primary:disabled {
+    @apply bg-brand-primary-disabled text-brand-muted cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-brand-canvas text-brand-ink text-btn
+           rounded-md px-5 py-3 h-10 border border-brand-hairline
+           inline-flex items-center justify-center
+           transition-colors duration-150;
+  }
+  .btn-secondary:hover {
+    @apply bg-brand-surface-card;
+  }
+
+  .btn-secondary-on-dark {
+    @apply bg-brand-surface-dark-elevated text-brand-on-dark text-btn
+           rounded-md px-5 py-3 h-10
+           inline-flex items-center justify-center
+           transition-colors duration-150;
+  }
+
+  .btn-text-link {
+    @apply bg-transparent text-brand-ink text-btn
+           inline-flex items-center justify-center;
+  }
+
+  .btn-danger {
+    @apply bg-brand-error text-brand-on-primary text-btn
+           rounded-md px-5 py-3 h-10
+           inline-flex items-center justify-center
+           transition-colors duration-150;
+  }
+  .btn-danger:hover {
+    @apply opacity-90;
+  }
+
+  .text-link {
+    @apply text-brand-primary text-body-md underline;
+  }
+
+  .input-text {
+    @apply bg-brand-canvas text-brand-ink text-body-md
+           rounded-md px-3.5 py-2.5 h-10 w-full
+           border border-brand-hairline
+           outline-none transition-all duration-150;
+  }
+  .input-text:focus {
+    @apply border-brand-primary ring-[3px] ring-brand-primary/15;
+  }
+  .input-text::placeholder {
+    @apply text-brand-muted-soft;
+  }
+}
